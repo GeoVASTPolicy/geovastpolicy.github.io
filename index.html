@@ -3,95 +3,86 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="GeoVAST: geometric vision–tactile learning for dexterous robotic assembly.">
-    <meta name="theme-color" content="#071a2c">
+    <meta name="description" content="GeoVAST grounds vision and touch in a shared 3D space and co-trains on simulated and real demonstrations to learn contact-rich dexterous assembly.">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
-    <title>GeoVAST | Geometric Vision–Tactile Assembly</title>
+    <link rel="stylesheet" href="styles.css?v=20260916">
+    <title>GeoVAST | Geometry-Grounded Visuotactile Dexterous Assembly</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="GeoVAST home">Geo<span>VAST</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#approach">Approach</a>
+      <a class="wordmark" href="#top" aria-label="GeoVAST home">GeoVAST<span aria-hidden="true">.</span></a>
+      <nav aria-label="Page sections">
+        <a href="#overview">Overview</a>
+        <a href="#method">Method</a>
         <a href="#tasks">Tasks</a>
-        <a href="#resources">Resources</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Dexterous robotic assembly</p>
-          <h1 id="hero-title">Geometric vision–tactile learning for contact-rich assembly</h1>
-          <p class="lede">GeoVAST unifies global visual geometry and fingertip contact evidence for closed-loop multi-finger manipulation.</p>
-          <div class="resource-row" aria-label="Project resources">
-            <a class="button primary" href="#resources">Project resources <span aria-hidden="true">↓</span></a>
-            <a class="button secondary" href="https://github.com/GeoVASTPolicy" aria-label="GeoVAST GitHub profile">GitHub <span aria-hidden="true">↗</span></a>
-          </div>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="project-title">
+        <p class="eyebrow">Dexterous assembly with vision and touch</p>
+        <h1 id="project-title">GeoVAST<span class="paper-title">Geometry-Grounded Visuotactile Dexterous Assembly<br class="desktop-break"> via Sim-Real Co-Training</span></h1>
+        <div class="tldr">
+          <span class="tldr-label">TL;DR</span>
+          <p>GeoVAST grounds vision and touch in a shared 3D space and co-trains on simulated and real demonstrations to learn contact-rich dexterous assembly.</p>
         </div>
-        <figure class="hero-visual">
-          <img src="sim-real-pyramid.png" alt="A 3D pyramid with broad simulated data at the base and limited real data at the apex.">
-          <figcaption>Large-scale simulation expands contact coverage; limited real data aligns the policy with real-world contact physics.</figcaption>
+      </section>
+
+      <section class="figure-section overview" id="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <h2 id="overview-title">Vision, touch, and shared geometry</h2>
+          <span class="figure-number">Figure 1</span>
+        </div>
+        <figure>
+          <a class="figure-link overview-image" href="figure-overview.webp" target="_blank" rel="noopener" aria-label="Open the GeoVAST overview figure at full resolution in a new tab">
+            <img src="figure-overview.webp" width="1345" height="1344" fetchpriority="high" alt="GeoVAST overview: a robotic hand threads a nut, visual and tactile observations share a 3D representation, and simulated and real demonstrations are combined for policy learning.">
+          </a>
+          <figcaption>Global visual geometry and local fingertip contact cues are combined with diverse simulated behaviors and real-world demonstrations.</figcaption>
         </figure>
       </section>
 
-      <section class="overview" id="approach" aria-labelledby="approach-title">
-        <p class="section-label">Approach</p>
+      <section class="figure-section" id="method" aria-labelledby="method-title">
         <div class="section-heading">
-          <h2 id="approach-title">A shared geometric frame for sight and touch</h2>
-          <p>Vision provides broad scene context. Tactile observations resolve local contact, alignment, resistance, and slip when vision alone is ambiguous.</p>
+          <h2 id="method-title">Geometry-grounded visuotactile policy</h2>
+          <span class="figure-number">Figure 2</span>
         </div>
-        <div class="flow" aria-label="GeoVAST processing stages">
-          <article>
-            <span class="number">01</span>
-            <h3>Visual geometry</h3>
-            <p>Scene points describe the part, target interface, and surrounding workspace.</p>
-          </article>
-          <article>
-            <span class="number">02</span>
-            <h3>Contact geometry</h3>
-            <p>Fingertip observations capture localized interaction and deformation.</p>
-          </article>
-          <article>
-            <span class="number">03</span>
-            <h3>Closed-loop action</h3>
-            <p>The policy updates its motion as geometry and contact evidence change.</p>
-          </article>
-        </div>
+        <figure>
+          <a class="figure-link" href="figure-architecture.webp" target="_blank" rel="noopener" aria-label="Open the policy architecture figure at full resolution in a new tab">
+            <img src="figure-architecture.webp" width="2623" height="1289" loading="lazy" decoding="async" alt="Architecture with separate visual and tactile point sampling, within- and cross-modality feature exchange, proprioception, a flow-matching action expert, and sim-real domain alignment.">
+          </a>
+          <figcaption>Visual and tactile points interact in local 3D neighborhoods; their features condition a flow-matching policy, with feature alignment and domain conditioning for sim-real co-training.</figcaption>
+        </figure>
       </section>
 
-      <section class="tasks" id="tasks" aria-labelledby="tasks-title">
-        <div class="tasks-intro">
-          <p class="section-label">Assembly tasks</p>
-          <h2 id="tasks-title">Representative contact-rich skills</h2>
-          <p>Initial demonstrations and benchmark details will be released with the paper.</p>
+      <section class="figure-section" id="tasks" aria-labelledby="tasks-title">
+        <div class="section-heading">
+          <h2 id="tasks-title">Assembly in simulation and the real world</h2>
+          <span class="figure-number">Figure 4</span>
         </div>
-        <div class="task-grid">
-          <article><span>01</span><h3>Peg insertion</h3><p>Alignment under partial occlusion.</p></article>
-          <article><span>02</span><h3>Gear meshing</h3><p>Contact-guided engagement.</p></article>
-          <article><span>03</span><h3>Nut threading</h3><p>Fine rotational coordination.</p></article>
-          <article><span>04</span><h3>Drawer insertion</h3><p>Constrained multi-stage motion.</p></article>
-        </div>
+        <figure>
+          <a class="figure-link" href="figure-tasks.webp" target="_blank" rel="noopener" aria-label="Open the assembly task figure at full resolution in a new tab">
+            <img src="figure-tasks.webp" width="2689" height="1261" loading="lazy" decoding="async" alt="Six simulation tasks: peg insertion, gear meshing, screwdriver use, nut threading, drawer insertion, and table assembly; four real-world tasks: peg insertion, gear meshing, nut threading, and drawer insertion.">
+          </a>
+          <figcaption>Six simulated assembly tasks cover different geometries and contact modes; four are also evaluated on the real robot.</figcaption>
+        </figure>
       </section>
 
-      <section class="resources" id="resources" aria-labelledby="resources-title">
-        <div>
-          <p class="section-label">Resources</p>
-          <h2 id="resources-title">More material is on the way</h2>
+      <section class="figure-section hardware" id="hardware" aria-labelledby="hardware-title">
+        <div class="section-heading">
+          <h2 id="hardware-title">Real-world setup</h2>
+          <span class="figure-number">Figure 3</span>
         </div>
-        <div class="resource-list">
-          <a href="#" aria-disabled="true" onclick="return false;"><span>Paper</span><strong>Coming soon</strong><i aria-hidden="true">↗</i></a>
-          <a href="#" aria-disabled="true" onclick="return false;"><span>Code</span><strong>Coming soon</strong><i aria-hidden="true">↗</i></a>
-          <a href="#" aria-disabled="true" onclick="return false;"><span>Data</span><strong>Coming soon</strong><i aria-hidden="true">↗</i></a>
-          <a href="#" aria-disabled="true" onclick="return false;"><span>Video</span><strong>Coming soon</strong><i aria-hidden="true">↗</i></a>
-        </div>
+        <figure>
+          <a class="figure-link hardware-image" href="figure-hardware.webp" target="_blank" rel="noopener" aria-label="Open the hardware setup figure at full resolution in a new tab">
+            <img src="figure-hardware.webp" width="1228" height="923" loading="lazy" decoding="async" alt="Real-world hardware setup with a DexMate robot, a Sharpa dexterous hand, and Azure Kinect cameras.">
+          </a>
+          <figcaption>A DexMate robot with Sharpa hands and Azure Kinect cameras provides the real-world assembly platform.</figcaption>
+        </figure>
       </section>
     </main>
 
-    <footer>
-      <span>© 2026 GeoVAST</span>
-      <span>Geometric Vision–Tactile Assembly</span>
-    </footer>
+    <footer><span>GeoVAST</span><span>Geometry-grounded visuotactile assembly</span></footer>
   </body>
 </html>

@@ -1,12 +1,8 @@
-# GeoVAST project page
+# GeoVAST
 
-This repository is prepared for the GitHub Pages user-site repository named `geovastpolicy.github.io`.
+Geometry-Grounded Visuotactile Dexterous Assembly via Sim-Real Co-Training.
 
-Create a public repository named `geovastpolicy.github.io`, upload this directory's contents to its default branch, and enable Pages from that branch. The site will appear at `https://geovastpolicy.github.io/`.
+Project website: https://geovastpolicy.github.io/
 
-## Planned resources
-
-- Paper PDF
-- Code repository
-- Dataset and training details
-- Demonstration videos
+A static project page with a one-sentence overview and four figures from the paper.
+Open `index.html` to preview; GitHub Pages serves the files directly from `main`.
